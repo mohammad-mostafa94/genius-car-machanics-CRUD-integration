@@ -8,4 +8,3 @@ const firebaseConfig = {
   };
   
   export default firebaseConfig;
-  console.log(process.env);

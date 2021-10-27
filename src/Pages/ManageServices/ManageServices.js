@@ -6,7 +6,7 @@ const ManageServices = () => {
 
     const [services, setServices] = useState([])
     useEffect(()=>{
-        fetch("http://localhost:5000/services")
+        fetch("https://calm-everglades-15369.herokuapp.com/services")
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[]);
@@ -15,7 +15,7 @@ const ManageServices = () => {
 
         const proceed = window.confirm("are you sure , you want to delete it?");
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`
+            const url = `https://calm-everglades-15369.herokuapp.com/service/${id}`
                     axios.delete(url)
                     .then(res=>{
                         console.log(res.data);

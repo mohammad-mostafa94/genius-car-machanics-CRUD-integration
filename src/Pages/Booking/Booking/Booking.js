@@ -9,7 +9,7 @@ const Booking = () => {
     const { serviceId } = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/service/${serviceId}`)
+        fetch(`https://calm-everglades-15369.herokuapp.com/service/${serviceId}`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data);

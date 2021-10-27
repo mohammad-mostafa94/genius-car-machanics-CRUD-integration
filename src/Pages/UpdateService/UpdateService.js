@@ -12,7 +12,7 @@ const UpdateService = () => {
     const { register, handleSubmit ,reset} = useForm();
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/service/${updateId}`)
+        fetch(`https://calm-everglades-15369.herokuapp.com/service/${updateId}`)
         .then(res=>res.json())
         .then(data=>{
             setUpdateService(data);
@@ -21,7 +21,7 @@ const UpdateService = () => {
 
     const handleChangeName = e =>{
         const updatedName = e.target.value;
-        const updatedService = {name:updatedName , price: updateService.price};
+        const updatedService = {name:updatedName , price: updateService.price , _id:updateService._id};
         setUpdateService(updatedService);
     }
     const handleChangePrice = e =>{
@@ -31,7 +31,7 @@ const UpdateService = () => {
     }
 
     const onSubmit = data => {
-        axios.put(`http://localhost:5000/update/${updateId}`, data)
+        axios.put(`https://calm-everglades-15369.herokuapp.com/update/${updateId}`, data)
         .then(res=>{
             console.log(res.data);
             if (res.data.modifiedCount > 0) {
