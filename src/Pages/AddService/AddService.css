@@ -1,12 +1,9 @@
 .addServiceStyle form {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
 
 .addServiceStyle form input,
 textarea {

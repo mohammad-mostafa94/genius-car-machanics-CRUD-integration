@@ -10,7 +10,7 @@ const Services = () => {
         fetch('https://calm-everglades-15369.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data));
-    }, [])
+    }, []);
 
     return (
         <div id="services">

@@ -12,7 +12,6 @@ const ManageServices = () => {
     },[]);
 
     const handleDeleteService = id => {
-
         const proceed = window.confirm("are you sure , you want to delete it?");
         if (proceed) {
             const url = `https://calm-everglades-15369.herokuapp.com/service/${id}`
@@ -20,7 +19,6 @@ const ManageServices = () => {
                     .then(res=>{
                         console.log(res.data);
                         if (res.data.deletedCount) {
-                            
                             alert("delete a service");
                             const remainingService = services.filter(service=> service._id !== id);
                             setServices(remainingService);

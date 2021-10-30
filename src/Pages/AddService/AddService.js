@@ -5,16 +5,16 @@ import './AddService.css';
 const AddService = () => {
 
     const { register, handleSubmit ,reset} = useForm();
-  const onSubmit = data => {
-     axios.post("https://calm-everglades-15369.herokuapp.com/service",data)
-     .then(res=>{
-         console.log(res.data);
-         console.log(res.data.insertedId);
-         if (res.data.insertedId) {
-             alert("data added successfully");
-             reset();
-         }
-     })
+    const onSubmit = data => {
+        axios.post("https://calm-everglades-15369.herokuapp.com/service",data)
+        .then(res=>{
+            console.log(res.data);
+            console.log(res.data.insertedId);
+            if (res.data.insertedId) {
+                alert("data added successfully");
+                reset();
+            }
+        })
     };
     return (
         <div className="addServiceStyle">
